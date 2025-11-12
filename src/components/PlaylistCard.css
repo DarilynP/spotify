@@ -1,0 +1,32 @@
+.playlist-card {
+    width: 150px;
+    background-color: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .playlist-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .playlist-card img {
+    width: 100%;
+    display: block;
+  }
+  
+  .playlist-info {
+    padding: 8px;
+  }
+  
+  .playlist-info h3 {
+    font-size: 0.95rem;
+    margin: 4px 0;
+  }
+  
+  .playlist-info p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+  

@@ -1,0 +1,21 @@
+:root {
+  --spotify-green: #1db954;
+  --background: #121212;
+  --card: #181818;
+  --text-primary: #fff;
+  --text-secondary: #b3b3b3;
+  --radius: 8px;
+  --font-main: 'Inter', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
