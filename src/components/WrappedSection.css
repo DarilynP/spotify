@@ -1,0 +1,26 @@
+.wrapped-section {
+    padding: 16px;
+    color: white;
+  }
+  
+  .tag {
+    color: #1db954;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .wrapped-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  
+  .wrapped-card {
+    background: #333;
+    height: 120px;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+  }
+  

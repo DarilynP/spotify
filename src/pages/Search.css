@@ -1,0 +1,55 @@
+.search-page {
+    padding: 20px 16px;
+    color: white;
+  }
+  
+  .search-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  /* Search Bar */
+  .search-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 20px;
+  }
+  
+  .search-input::placeholder {
+    color: #b3b3b3;
+  }
+  
+  /* Browse Title */
+  .browse-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  
+  /* Categories Grid */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  
+  .category-card {
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+  }
+  

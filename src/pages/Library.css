@@ -1,0 +1,62 @@
+.library-page {
+    padding: 20px 16px;
+    color: white;
+  }
+  
+  .library-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .library-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .library-tabs button {
+    background: #2a2a2a;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .library-tabs .active {
+    background: white;
+    color: black;
+  }
+  
+  .library-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .library-item {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  
+  .library-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .library-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .library-info p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #b3b3b3;
+  }
+  
