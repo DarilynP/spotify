@@ -6,36 +6,31 @@ import SearchNews from "../assets/SearchNews.png";
 import SearchComedy from "../assets/SearchComedy.png";
 
 export default function Search() {
-  // Track the user's search input
   const [query, setQuery] = useState("");
 
-  // Fake searchable data
-  const data = [
-    "Lana Del Rey",
-    "Drake",
-    "Chill Hits",
-    "Workout",
-    "Hip-Hop",
-    "Pop",
-    "Jazz",
-    "Indie",
+  // ⭐ SEARCHABLE ARTIST LIST
+  const artists = [
+    { name: "Lana Del Rey", image: SearchIndie },
+    { name: "Drake", image: SearchPop },
+    { name: "Billie Eilish", image: SearchIndie },
+    { name: "Travis Scott", image: SearchPop },
+    { name: "Joji", image: SearchIndie },
   ];
 
-  // Filter results based on what user types
-  const results = data.filter((item) =>
-    item.toLowerCase().includes(query.toLowerCase())
+  // ⭐ FILTER SEARCH
+  const results = artists.filter((artist) =>
+    artist.name.toLowerCase().includes(query.toLowerCase())
   );
 
-  // ⭐ Default categories for Browse All
+  // ⭐ BROWSE CATEGORIES
   const categories = [
+    { title: "Popular", color: "#ff7675" },
+    { title: "Browse All", color: "#74b9ff" },
     { title: "Pop", image: SearchPop },
     { title: "Hip-Hop", color: "#0984e3" },
     { title: "Chill", color: "#6c5ce7" },
     { title: "Workout", color: "#00b894" },
     { title: "Latin", color: "#fdcb6e" },
-    { title: "Podcasts", color: "#d63031" },
-    { title: "Throwbacks", color: "#e17055" },
-    { title: "Jazz", color: "#2d3436" },
     { title: "Indie", image: SearchIndie },
     { title: "News", image: SearchNews },
     { title: "Comedy", image: SearchComedy },
@@ -56,7 +51,7 @@ export default function Search() {
         />
       </div>
 
-      {/* ⭐ DEFAULT VIEW: SHOW CATEGORIES WHEN QUERY IS EMPTY */}
+      {/* ⭐ SHOW CATEGORIES WHEN SEARCH IS EMPTY */}
       {query.trim() === "" && (
         <>
           <h2 className="browse-title">Browse All</h2>
@@ -67,9 +62,9 @@ export default function Search() {
                 key={index}
                 className="category-card"
                 style={{
-                  backgroundImage: `url(${cat.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  background: cat.image
+                    ? `url(${cat.image}) center/cover`
+                    : cat.color,
                 }}
               >
                 <p>{cat.title}</p>
@@ -79,7 +74,7 @@ export default function Search() {
         </>
       )}
 
-      {/* SEARCH RESULTS WHEN TYPING */}
+      {/* ⭐ SHOW ARTIST RESULTS */}
       {query.trim() !== "" && (
         <div className="results-section">
           <h2 className="results-title">Results</h2>
@@ -87,13 +82,18 @@ export default function Search() {
           {results.length === 0 ? (
             <p className="no-results">No results found.</p>
           ) : (
-            <ul className="results-list">
-              {results.map((item, index) => (
-                <li key={index} className="result-item">
-                  {item}
-                </li>
+            <div className="artist-results">
+              {results.map((artist, index) => (
+                <div key={index} className="artist-card">
+                  <img
+                    src={artist.image}
+                    alt={artist.name}
+                    className="artist-img"
+                  />
+                  <p className="artist-name">{artist.name}</p>
+                </div>
               ))}
-            </ul>
+            </div>
           )}
         </div>
       )}

@@ -146,4 +146,26 @@
       gap: 12px;
     }
   }
+  .artist-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .artist-card {
+    text-align: center;
+  }
+  
+  .artist-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .artist-name {
+    margin-top: 10px;
+    font-weight: 500;
+  }
   
